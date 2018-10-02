@@ -1,6 +1,6 @@
 {
 	"name" : "spodnet/zend-soap",
-	"description" : "Zend Framework 1 Soap package, with additiona decimal and default fields",
+	"description" : "Zend Framework 1 Soap package, with additional decimal and default fields",
 	"keywords" : [
 		"framework",
 		"zf1",
@@ -22,7 +22,7 @@
 		}
 	},
 	"replace" : {
-		"zf1/zend-soap" : "^1.12"
+		"spodnet/zend-soap" : "^1.12"
 	},
 	"extra" : {
 		"branch-alias" : {
