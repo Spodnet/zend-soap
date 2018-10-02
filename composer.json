@@ -22,7 +22,7 @@
 		}
 	},
 	"replace" : {
-		"spodnet/zend-soap" : "^1.12"
+		"zf1s/zend-soap" : "^1.12"
 	},
 	"extra" : {
 		"branch-alias" : {
