@@ -76,6 +76,15 @@ class Zend_Soap_Wsdl_Strategy_DefaultComplexType extends Zend_Soap_Wsdl_Strategy
                 // If the default value is null, then this property is nillable.
                 if ($defaultProperties[$propertyName] === null) {
                     $element->setAttribute('nillable', 'true');
+                } else {
+                	// show the properties value as default value
+                	if ($defaultProperties[$propertyName] === false) {
+                		$element->setAttribute('default', 'false');
+                	} elseif ($defaultProperties[$propertyName] === true) {
+                		$element->setAttribute('default', 'true');
+                	} else {
+                		$element->setAttribute('default', (string) $defaultProperties[$propertyName]);
+                	}
                 }
 
                 $all->appendChild($element);
