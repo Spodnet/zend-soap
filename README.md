@@ -18,3 +18,22 @@ Add `"zf1s/zend-soap": "~1.12"` to the require section of your composer.json, in
 ## Broken dependencies?
 
 Dependencies have been set automatically based on the [requirements from the zend framework manual](http://framework.zend.com/manual/1.12/en/requirements.introduction.html), if you find any broken dependencies please submit a pull request.
+
+## Additional Changes
+
+This version has xsd:decimal and ability to set default attribute on any field in the class for complex type
+
+```
+/** @var Decimal */
+public $DecimalValue = 1;
+
+/** @var Boolean */
+public $BooleanValue = false;
+```
+
+Would generate
+
+```
+<xsd:element name="DecimalValue" type="xsd:decimal" default="1"/>
+<xsd:element name="BooleanValue" type="xsd:boolean" default="false"/>
+```
